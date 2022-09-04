@@ -1,0 +1,36 @@
+
+body {
+    margin-bottom: 40px;
+}
+
+#button_attribute{
+    background-color: #92BA92;
+    font-weight: bold;
+    border: #DAE2B6;
+}
+
+#login {
+    color: #92BA92;
+}
+
+#task_button{
+    background-color: #F7EDDB;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+
+#top {
+    background-color: #CCD6A6;
+}
+
+/* Edit Functions */
+
+#edit{
+    background-color: #92BA92;
+    border: #DAE2B6;
+}
+
+.list-group-item-action{
+    color: rgb(123, 117, 117);
+}
+

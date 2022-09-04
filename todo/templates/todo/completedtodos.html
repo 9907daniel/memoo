@@ -1,0 +1,30 @@
+{% extends "todo/base.html" %}
+
+{% block content %}
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-10">
+            <h1>Completed Todos</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-10">
+        {% if todos %}
+            <div class="list-group">
+                {% for todo in todos %}
+                    {% if todo.important %}
+                        <a href="{% url 'viewtodo' todo.id %}" id="task_button" class="list-group-item list-group-item-action{% if todo.important %} list-group-item-warning {% endif %}"><b><i class="fa-solid fa-star"></i>{{ todo.title }}</b> - Completed {{ todo.datecompleted|date:'M j Y H:i' }}</a>
+                    {% else %}
+                        <a href="{% url 'viewtodo' todo.id %}" id="task_button" class="list-group-item list-group-item-action"><b> {{ todo.title }}</b> - Completed {{ todo.datecompleted|date:'M j Y H:i' }}</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="text-center">
+                <h2>Looks like you don't have any Memo's. <br>Get Started!</h2>
+            <br>
+            <a role="button" id = "button_attribute" class="btn btn-primary" href="{% url 'createtodo' %}">New Moo</a>
+            </div>
+        {% endif %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+
+{% extends "todo/base.html" %}
+{% block content %}
+<br><br><br>
+<div class="row justify-content-center mt-5">
+        <div class="col-md-7 text-center">
+
+                 <h1>Simple, Fast, Efficient</h1>
+                 <h1>Memoo!</h1><hr>
+            <p> 
+                <ol>
+                    - Do you constantly forgets things? <br>
+                    - Is your MBTI a J (and find the constant need to make plans for everything)? <br>
+                    - Are you looking for a simple way to make memos? <br> <hr>
+                    Even if you are not, it is always a better to keep intact with your thoughts, assignments or anything with the slightest of importance! <br>
+                    Try it out! and stick around if Memoo works for you :) 
+                    <br> <br>
+                    
+                    Afterall, no one has ever forgotten <b>more</b> tasks for writing it down somewhere! <br> 
+                    - someone probably
+                </ol>
+            </p>
+        <a role="button" id ="button_attribute" class="btn btn-primary btn-lg" href="{% url 'signupuser' %}"><i class="fa-solid fa-cow"></i> Moo Away</a><br><br>
+        </div>
+    </div>
+
+{% endblock %}
